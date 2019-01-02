@@ -16,14 +16,12 @@ export class DesignScene {
     this.initObject();
     window.addEventListener('resize', this.onResizeEvent);
     this.onResizeEvent(null);
-    console.log(this.app);
   }
 
   protected onResizeEvent = (event: UIEvent) => {
     this.app.renderer.resize(this.app.view.clientWidth, this.app.view.clientHeight);
     this.app.stage.x = this.app.view.clientWidth / 2;
     this.app.stage.y = this.app.view.clientHeight / 2;
-    this.app.render();
   };
 
   protected initObject(): void {

@@ -1,5 +1,7 @@
 import * as PIXI from 'pixi.js';
-
+/**
+ * 2D场景网格
+ */
 export class GridBackground extends PIXI.Container {
   public static readonly GRID_BACKGROUND_COLOR: number = 0xefefef;  // 画布背景色
   public static readonly GRID_SIZE: number = 800;
@@ -33,7 +35,7 @@ export class GridBackground extends PIXI.Container {
       this.backgroundGrid.moveTo(i, -ww);
       this.backgroundGrid.lineTo(i, ww);
     }
-    this.backgroundGrid.lineStyle(2.0, GridBackground.DEFAULT_GRID_COLOR, 1.0);
+    this.backgroundGrid.lineStyle(2.0, GridBackground.DEFAULT_GRID_AXIS_COLOR, 1.0);
     this.backgroundGrid.moveTo(-ww, 0);
     this.backgroundGrid.lineTo(ww, 0);
     this.backgroundGrid.moveTo(0, -ww);
