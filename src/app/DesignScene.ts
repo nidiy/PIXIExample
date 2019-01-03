@@ -7,9 +7,9 @@ export class DesignScene {
   public scene2D: Scene2D;
   public camera2d: SceneCamera2D;
 
-  constructor() {
+  constructor(element: HTMLCanvasElement) {
     this.app = new PIXI.Application({
-      view: document.getElementById('scene2D') as HTMLCanvasElement,
+      view: element,
       backgroundColor: 0xFFFFFF,
       antialias: true
     });
