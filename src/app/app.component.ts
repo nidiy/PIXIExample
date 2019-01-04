@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Scene2D} from '../scene/Scene2D';
 import {DesignScene} from './DesignScene';
 
@@ -9,12 +9,13 @@ import {DesignScene} from './DesignScene';
 })
 export class AppComponent implements OnInit {
   title = 'camera2d';
+  @ViewChild('scene2D') scene2D: ElementRef;
 
   constructor() {
 
   }
 
   ngOnInit() {
-    new DesignScene();
+    new DesignScene(this.scene2D.nativeElement);
   }
 }

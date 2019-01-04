@@ -13,9 +13,9 @@ export class DesignScene {
     this.app.stage.y = this.app.view.clientHeight / 2;
   };
 
-  constructor() {
+  constructor(element: HTMLCanvasElement) {
     this.app = new PIXI.Application({
-      view: document.getElementById('scene2D') as HTMLCanvasElement,
+      view: element,
       backgroundColor: 0xFFFFFF,
       antialias: true
     });
