@@ -13,9 +13,9 @@ export class Camera2D extends PIXI.utils.EventEmitter {
   }
 
   protected _x: number = 0;
-  /**
+  /**{number}
    * 相机的X坐标(注：该坐标为场景的本地坐标)
-   * @returns {number}
+   * @returns
    */
   get x(): number {
     return this._x;
@@ -112,18 +112,17 @@ export class Camera2D extends PIXI.utils.EventEmitter {
   }
 
   /**
+   * 释放相机
+   */
+  public dispose(): void {
+
+  }
+
+  /**
    * 更新相信信息并派发消息
    */
   protected updateCamera2D(): void {
     this.emit(Camera2D.CHANGE);
-  }
-
-  /**
-   * 释放相机
-   */
-  public dispose():void
-  {
-
   }
 
 }
