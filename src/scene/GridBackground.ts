@@ -17,8 +17,7 @@ export class GridBackground extends PIXI.Container {
     this.addChild(this.backgroundGrid);
     this.draw();
   }
-
-  protected draw() {
+  public draw() {
     this.backgroundGrid.clear();
     const ww: number = GridBackground.GRID_SIZE * 0.5;
     // 填充背景
@@ -40,6 +39,7 @@ export class GridBackground extends PIXI.Container {
     this.backgroundGrid.lineTo(ww, 0);
     this.backgroundGrid.moveTo(0, -ww);
     this.backgroundGrid.lineTo(0, ww);
+    this.backgroundGrid.endFill();
 
   }
 }
